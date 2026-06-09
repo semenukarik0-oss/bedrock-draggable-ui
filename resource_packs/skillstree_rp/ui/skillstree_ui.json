@@ -1,0 +1,213 @@
+{
+  "namespace": "skillstree",
+  
+  "skillstree_panel": {
+    "type": "panel",
+    "layer": 100,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [10, 30],
+    "size": [380, 280],
+    "background": true,
+    "background_color": "#1a1a2e88",
+    "border": "1px solid #5500AA",
+    "controls": [
+      {
+        "header@skillstree.header": {}
+      },
+      {
+        "tree_canvas@skillstree.tree_canvas": {
+          "offset": [5, 25]
+        }
+      },
+      {
+        "footer@skillstree.footer": {
+          "offset": [0, 265]
+        }
+      }
+    ]
+  },
+  
+  "header": {
+    "type": "panel",
+    "size": [380, 25],
+    "background": true,
+    "background_color": "#5500AA99",
+    "controls": [
+      {
+        "title@common.label": {
+          "text": "§6§l⚔ ДРЕВО НАВЫКОВ ⚔",
+          "offset": [10, 5],
+          "size": [350, 15],
+          "color": "#FFDD00",
+          "font_size": "large"
+        }
+      }
+    ]
+  },
+  
+  "tree_canvas": {
+    "type": "custom",
+    "size": [370, 240],
+    "controls": [
+      {
+        "skill_level1_bg@skillstree.level_bg": {
+          "offset": [0, 10]
+        }
+      },
+      {
+        "skill_node_1@skillstree.skill_node": {
+          "offset": [30, 20],
+          "$skill_name": "§cФайербол",
+          "$skill_level": "0/5",
+          "$skill_icon": "🔥",
+          "$skill_color": "#FF4444"
+        }
+      },
+      {
+        "skill_node_2@skillstree.skill_node": {
+          "offset": [130, 20],
+          "$skill_name": "§bФростболт",
+          "$skill_level": "0/5",
+          "$skill_icon": "❄",
+          "$skill_color": "#4488FF"
+        }
+      },
+      {
+        "skill_node_3@skillstree.skill_node": {
+          "offset": [230, 20],
+          "$skill_name": "§eУдар молнии",
+          "$skill_level": "0/5",
+          "$skill_icon": "⚡",
+          "$skill_color": "#FFDD00"
+        }
+      },
+      {
+        "skill_level2_bg@skillstree.level_bg": {
+          "offset": [0, 100]
+        }
+      },
+      {
+        "skill_node_4@skillstree.skill_node": {
+          "offset": [50, 110],
+          "$skill_name": "§4Инферно",
+          "$skill_level": "0/3",
+          "$skill_icon": "🌋",
+          "$skill_color": "#DD2200"
+        }
+      },
+      {
+        "skill_node_5@skillstree.skill_node": {
+          "offset": [150, 110],
+          "$skill_name": "§9Буран",
+          "$skill_level": "0/3",
+          "$skill_icon": "❄️",
+          "$skill_color": "#0055DD"
+        }
+      },
+      {
+        "skill_node_6@skillstree.skill_node": {
+          "offset": [250, 110],
+          "$skill_name": "§eЦепная молния",
+          "$skill_level": "0/3",
+          "$skill_icon": "⚡⚡",
+          "$skill_color": "#FFAA00"
+        }
+      },
+      {
+        "skill_level3_bg@skillstree.level_bg": {
+          "offset": [0, 190]
+        }
+      },
+      {
+        "skill_node_7@skillstree.skill_node": {
+          "offset": [140, 200],
+          "$skill_name": "§5Удар метеора",
+          "$skill_level": "0/1",
+          "$skill_icon": "✦",
+          "$skill_color": "#AA00FF"
+        }
+      }
+    ]
+  },
+  
+  "level_bg": {
+    "type": "panel",
+    "size": [370, 1],
+    "background": true,
+    "background_color": "#666666"
+  },
+  
+  "skill_node": {
+    "type": "panel",
+    "size": [80, 70],
+    "background": true,
+    "background_color": "#2a2a4444",
+    "border": "2px solid $skill_color",
+    "controls": [
+      {
+        "icon@common.label": {
+          "text": "$skill_icon",
+          "offset": [5, 2],
+          "size": [70, 15],
+          "color": "#FFFFFF",
+          "font_size": "large"
+        }
+      },
+      {
+        "name@common.label": {
+          "text": "$skill_name",
+          "offset": [2, 18],
+          "size": [76, 12],
+          "color": "#FFFFFF",
+          "font_size": "small"
+        }
+      },
+      {
+        "level@common.label": {
+          "text": "$skill_level",
+          "offset": [5, 32],
+          "size": [70, 10],
+          "color": "#AAAAAA",
+          "font_size": "small"
+        }
+      },
+      {
+        "upgrade_btn@common.button": {
+          "size": [70, 12],
+          "offset": [5, 54],
+          "text": "⬆ Апгрейд",
+          "color": "#00DD00",
+          "font_size": "small"
+        }
+      }
+    ]
+  },
+  
+  "footer": {
+    "type": "panel",
+    "size": [380, 15],
+    "background": true,
+    "background_color": "#220066AA",
+    "controls": [
+      {
+        "points@common.label": {
+          "text": "Поинты: 0",
+          "color": "#00FF00",
+          "offset": [10, 2],
+          "size": [150, 12],
+          "font_size": "small"
+        }
+      },
+      {
+        "help@common.label": {
+          "text": "/function ui/toggle - показать/скрыть",
+          "color": "#AAAAAA",
+          "offset": [170, 2],
+          "size": [200, 12],
+          "font_size": "small"
+        }
+      }
+    ]
+  }
+}
